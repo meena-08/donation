@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<title>Donation</title>
+<link rel="icon" href="images/icon.png" type="image/x-icon">
+<!--icon-->
+<!--font style class th-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<!--blink icon-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--font style heading-->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-size: cover;
+    }
+
+    .column {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        padding-top: 0px;
+    }
+
+    .left {
+        left: 0;
+        background-color: #F9DDD2;
+    }
+
+    .right {
+        right: 0;
+        background-color: #4A6274;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .ul1 {
+        margin-top: 0;
+        padding: 0;
+        padding-bottom: 50px;
+        background-color: transparent;
+    }
+
+    .li1 {
+        float: left;
+    }
+
+    .btn1 {
+        color: white;
+        background-color: #951C02;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 5px;
+        margin-left: 10px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .th {
+        font-size: 30px;
+        font-family: 'Dancing Script', cursive;
+        ;
+        text-align: center;
+        color: #4A6277;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        padding-left: 230px;
+    }
+
+    .right .rect-box {
+        width: 60%;
+        height: auto;
+        background-color: cornsilk;
+        margin: 22% 0 0 20%;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 10px 10px 5px grey;
+    }
+
+    .heading {
+        font-size: 22px;
+        font-family: 'Noto Serif', serif;
+    }
+
+    .blink-hand .fa {
+        animation: blinker 0.6s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .pay {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .btn2 {
+        width: 150px;
+        background-color: #363393;
+        text-align: center;
+        font-weight: 800;
+        padding: 11px 0px;
+        color: white;
+        font-size: 12px;
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        border-radius: 12px;
+    }
+</style>
+
+<head></head>
+
+<body>
+
+    <div class="row">
+        <div class="column left">
+
+            <ul class="ul1">
+                <li class="li1" onclick="window.history.back()"><button type="button" class="btn1">
+                        <span>
+                            <i class="fa fa-hand-o-left" aria-hidden="true"></i>&nbsp;Back</button></li>
+                </span>
+            </ul>
+
+            <div class="th">
+                <p>"Little, By little</p>
+                <p>a little becomes a lot"</p>
+                <p>Every act counts, no matter how small!!</p>
+            </div>
+
+            <img src="images/donate.png" alt="donate">
+
+            <div class="th">
+                <p>"It's not about how much we give but</p>
+                <p>how much love we put into giving!!"</p>
+            </div>
+
+        </div>
+
+        <div class="column right">
+            <div class="rect-box">
+                <p class="heading">
+                    Please proceed with your choice of Gateway....
+                    <span class="blink-hand">
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    </span>
+                </p>
+
+                <p class="pay"><i>Using PayU Gateway</i></p>
+                <div>
+                    <a style=" width: 135px; background-color: #1065b7; 
+                                     text-align: center; font-weight: 800;
+                                     padding: 11px 0px; color: white; font-size: 14px; 
+                                     display: inline-block; text-decoration: none; 
+                                     border-radius: 12px;
+                                     " href='https://pmny.in/nIyKz146HUvM'> Donate Now </a>
+                </div>
+
+                <p class="pay"><strong><i>OR</i></strong></p>
+
+                <p class="pay"><i>Using RazorPay Gateway</i></p>
+                <form>
+                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                        data-payment_button_id="pl_IYbEsNUVyhkw4u" async> </script>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

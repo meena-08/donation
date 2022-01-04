@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<title>Donation</title>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon">
+
+<style>
+    body {
+        background-image: url('images/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 0px;
+        background-position: initial;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        font: bold 25px;
+    }
+
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: whitesmoke;
+        font-size: 30px;
+        padding: 20px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        text-decoration: underline;
+        letter-spacing: 2px;
+    }
+
+    .para {
+        float: left;
+    }
+
+    .para1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 40px;
+        padding-left: 770px;
+        color: black;
+    }
+
+    strong {
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: peachpuff;
+    }
+
+    .para2 {
+        font-family: Allison;
+        font-size: 30px;
+        padding-left: 750px;
+        color: #24211e;
+    }
+
+    .para3 {
+        font-family: Allison;
+        font-size: 30px;
+        padding-left: 730px;
+        color: #24211e;
+    }
+
+    .para4 {
+        float: rigt;
+        padding-right: 150px;
+        padding-left: 850px;
+        font-size: 35px;
+        color: #951C02;
+        font-family: sans-serif;
+        font: bold 25px;
+    }
+
+    .blink {
+        animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .btn {
+        float: rigt;
+        padding-right: 150px;
+        padding-left: 940px;
+    }
+
+    .btn1 {
+        color: white;
+        background-color: #951C02;
+        font-size: 30px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .btn1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .btn1 span:after {
+        content: 'Now';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 2s;
+    }
+
+    .btn1:hover span {
+        padding-right: 60px;
+    }
+
+    .btn1:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .foot {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+    }
+
+    .foot1 {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+    }
+
+    img {
+        height: 25px;
+        width: 25px;
+    }
+</style>
+
+<head></head>
+
+<body>
+
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+
+    <div class="para">
+        <p class="para1">Support for a <strong>C.A.U.S.E</strong></p>
+        <p class="para2"><i>"Remember that the happiest people are</i> </p>
+        <p class="para3"><i>not those getting more, but those giving more."</i></p>
+    </div>
+
+    <div class="para4">
+        <p><b>Be a Fund-Raiser
+                <span class="blink">👇</span>
+            </b></p>
+    </div>
+
+    <div class="btn">
+        <a href="donate.html"><button type="button" class="btn1"><span>Donate&nbsp;</span></button></a>
+    </div>
+
+    <div class="foot">
+        <footer>
+            <p class="foot1">Designed & Developed by <a href="devloper.html" style="color: black;">Meena</a></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

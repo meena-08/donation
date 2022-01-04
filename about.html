@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<title>Donation | About</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="images/icon.png" type="image/x-icon">
+
+<!--CSS-->
+<style>
+  body {
+    background-color: black;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-position: initial;
+  }
+
+  .ul1 {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    font: bold 25px;
+  }
+
+  .li1 {
+    float: right;
+  }
+
+  .li1 a {
+    display: block;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+
+  .li1 a:hover {
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+
+  .nav1 {
+    padding-right: 550px;
+  }
+
+  .nav {
+    display: block;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+
+  .blink {
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .btn1 {
+    color: white;
+    background-color: #951C02;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .btn1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .btn1 span:after {
+    content: 'Now';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0px;
+    transition: 2s;
+  }
+
+  .btn1:hover span {
+    padding-right: 30px;
+  }
+
+  .btn1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+      font-size: 11px
+    }
+  }
+
+
+  .page-content .heading .heading-para {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+  }
+
+  .page-content .body-content {
+    background-color: #e2e2e2;
+    padding: 20px;
+    width: 50%;
+    border-radius: 30px;
+    margin: 2% 0 2% 4%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .page-content .body-content .body-content-para {
+    font-weight: 500;
+    margin: 10% 40% 0 0;
+    width: 40%;
+    text-align: justify;
+  }
+
+  .page-content .body-content .body-content-para-image {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin: -32% 0 0 45%;
+  }
+
+  .page-content .body-content-right {
+    background-color: #e2e2e2;
+    padding: 20px;
+    width: 35%;
+    border-radius: 30px;
+    float: right;
+    margin: -25.5% 4% 4% 0%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .page-content .body-content-right .body-content-right-para {
+    font-weight: 500;
+    margin: 5% 40% 0 0;
+    width: 90%;
+    text-align: justify;
+  }
+
+  .page-content .body-content-right .body-content-right-para-image {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    margin: 8% 0 0 5%;
+  }
+
+  .page-content .body-content-left-center {
+    background-color: #e2e2e2;
+    padding: 20px;
+    width: 50%;
+    border-radius: 30px;
+    float: left;
+    margin: 2% 0% 0% 4%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .page-content .body-content-left-center .body-content-left-center-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin: -1% 0 0 0;
+  }
+
+  .page-content .body-content-left-center .body-content-left-center-para {
+    font-weight: 500;
+    margin: 0% 40% 0 0;
+    width: 90%;
+    text-align: justify;
+    font-size: 22px;
+  }
+
+  .page-content .body-content-left-center .body-content-left-center-para q:after {
+    content: close-quote;
+    font-size: 45px;
+    color: black;
+  }
+
+  .page-content .body-content-left-center .body-content-left-center-para q:before {
+    content: open-quote;
+    font-size: 45px;
+    color: black;
+  }
+
+  @media (max-width: 880px) {
+    .page-content .body-content {
+      width: auto;
+    }
+
+    .page-content .body-content .body-content-para {
+      width: auto;
+      text-align: justify;
+      margin: 0 0 0 0;
+    }
+
+    .page-content .body-content .body-content-para-image {
+      margin: 0 0 0 0;
+      width: 80%;
+      height: auto;
+    }
+
+    .page-content .body-content-right {
+      width: auto;
+      margin: 7% 0 0 0;
+    }
+
+    .page-content .body-content-right .body-content-right-para {
+      width: auto;
+      text-align: justify;
+      margin: 0 0 0 0;
+    }
+
+    .page-content .body-content-right .body-content-right-para-image {
+      margin: 0 0 0 0;
+      width: 85%;
+      height: auto;
+    }
+
+    .page-content .body-content-left-center {
+      width: auto;
+      margin: 7% 0 0 0;
+    }
+
+    .page-content .body-content-left-center .body-content-left-center-heading {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .page-content .body-content-left-center .body-content-left-center-para {
+      width: auto;
+      text-align: justify;
+      margin: 0 0 0 0;
+    }
+
+  }
+</style>
+
+<head></head>
+
+<body>
+
+  <ul class="ul1">
+    <li class="li1"><a href="contact.html">Contact</a></li>
+    <li class="li1"><a href="about.html">About</a></li>
+    <li class="li1"><a href="index.html">Home</a></li>
+
+    <a href="donate.html">
+      <li class="nav1 li1"><button type="button" class="btn1"><span>Donate&nbsp;</span></button></li>
+    </a>
+
+    <li class="nav li1">Support for a Cause <span class="blink">👉</span></li>
+  </ul>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/6.jpg" style="width:100%">
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+
+  <script>
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+  </script>
+  <section class="page-content">
+    <div class="heading">
+      <p class="heading-para">About Us</p>
+    </div>
+
+    <div class="body-content">
+      <p class="body-content-para">Donation is a non-political, non-profit organisation committed to the development of
+        rural India. Donation began in a remote village in the Chhattisgarh District.
+        It was registered under The Societies Registration Act of 1860. Donation is now working in over 100 villages.
+      </p>
+      <img class="body-content-para-image" src="images/7.jpg" alt="images">
+    </div>
+
+    <div class="body-content-right">
+      <p class="body-content-right-para">Our approach is to ‘help people help themselves’ by making the disadvantaged
+        self-reliant and enabling them to lead a life of dignity.
+        This philosophy lays the foundation for our programmes so that they have the buy-in of the entire community and
+        are hence sustainable and effective.<br><br>We work with and through grassroot organisations that have passion
+        and purpose, but are strapped for funds.
+        We will help such organisations with not just funding but also capacity building.</p>
+      <img class="body-content-right-para-image" src="images/8.jpg" alt="images">
+    </div>
+
+    <div class="body-content-left-center">
+      <p class="body-content-left-center-heading">Mission</p>
+      <p class="body-content-left-center-para"><q>To work for the cause and care of disadvantaged humans and to improve
+          their quality of life.</q></p>
+    </div>
+  </section>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<title>Donation | Contact</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" href="images/icon.png" type="image/x-icon">
+
+<!--CSS-->
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 126, 103);
+  }
+
+  .background {
+    height: 100vh;
+    width: 110%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    background: peachpuff;
+    clip-path: circle(60% at 100%);
+    z-index: -9999;
+  }
+
+  .ul1 {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    font: bold 25px;
+  }
+
+  .li1 {
+    float: right;
+  }
+
+  .li1 a {
+    display: block;
+    color: black;
+    font-size: 30px;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+
+  .li1 a:hover {
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+
+  .nav1 {
+    padding-right: 600px;
+  }
+
+  .nav {
+    display: block;
+    color: black;
+    font-size: 30px;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+
+  .blink {
+    animation: blinker 0.6s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .btn1 {
+    color: white;
+    background-color: #951C02;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .btn1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .btn1 span:after {
+    content: 'Now';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0px;
+    transition: 2s;
+  }
+
+  .btn1:hover span {
+    padding-right: 30px;
+  }
+
+  .btn1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .my-form h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .my-form li,
+  .my-form .grid>*:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .my-form select,
+  .my-form input,
+  .my-form textarea,
+  .my-form button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid black;
+    color: white;
+    background: #333;
+  }
+
+  .my-form textarea {
+    height: 170px;
+  }
+
+  .my-form ::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  .my-form select:focus,
+  .my-form input:focus,
+  .my-form textarea:focus,
+  .my-form button:enabled:hover,
+  .my-form button:focus,
+  .my-form input[type="checkbox"]:focus+label {
+    background: rgb(58, 57, 57);
+    transform: scale(1.1);
+  }
+
+  .my-form select:focus,
+  .my-form input:focus,
+  .my-form textarea:focus {
+    transform: scale(1.02);
+  }
+
+  /* FORM BTNS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+  }
+
+  .my-form button {
+    font-weight: bold;
+  }
+
+  .my-form button>* {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .my-form button .back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+  }
+
+  .my-form button:enabled:hover .back,
+  .my-form button:focus .back {
+    transform: translate(-50%, -50%);
+  }
+
+  .my-form button:enabled:hover .front,
+  .my-form button:focus .front {
+    transform: translateX(110%);
+  }
+
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (min-width: 600px) {
+    .my-form .grid {
+      display: grid;
+      grid-gap: 1.5rem;
+    }
+
+    .my-form .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .my-form .grid-3 {
+      grid-template-columns: 0.5fr 0.5fr 0.5fr;
+      align-items: center;
+      padding-left: 190px;
+      padding-right: 0px;
+    }
+
+    .my-form .grid>*:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    .my-form .required-msg {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 541px) {
+    .my-form input[type="checkbox"]+label::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .my-form input[type="checkbox"]:checked+label::after {
+      top: 3px;
+    }
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+    font-size: 100%;
+  }
+
+  button,
+  label {
+    cursor: pointer;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
+
+<head></head>
+
+<body>
+  <div class="background"></div>
+  <ul class="ul1">
+    <li class="li1"><a href="contact.html">Contact</a></li>
+    <li class="li1"><a href="about.html">About</a></li>
+    <li class="li1"><a href="index.html">Home</a></li>
+
+    <a href="donate.html">
+      <li class="nav1 li1"><button type="button" class="btn1"><span>Donate&nbsp;</span></button></li>
+    </a>
+    <li class="nav li1">Support for a Cause <span class="blink">👉</span></li>
+  </ul>
+
+  <form class="my-form">
+    <div class="container">
+      <h1>Get in touch!</h1>
+      <ul>
+        <li>
+          <div class="grid grid-2">
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid grid-2">
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone No.">
+          </div>
+        </li>
+        <li>
+          <textarea placeholder="Message"></textarea>
+        </li>
+        <li>
+          <div class="grid grid-3">
+            <button class="btn-grid" type="submit">
+              <span class="back">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+              </span>
+              <span class="front">SUBMIT</span>
+            </button>
+            <button class="btn-grid" type="reset">
+              <span class="back">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+              </span>
+              <span class="front">RESET</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </form>
+
+
+</body>
+
+
+</html>
